@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_inner_margin">20dp</dimen>
+    <dimen name="card_value_size">20dp</dimen>
+
+    <dimen name="default_20dp">20dp</dimen>
+    <dimen name="default_10dp">10dp</dimen>
+    <dimen name="default_5dp">5dp</dimen>
+
+    <dimen name="button_dimen">18dp</dimen>
+</resources>

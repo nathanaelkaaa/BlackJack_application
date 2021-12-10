@@ -8,4 +8,8 @@
     <dimen name="default_5dp">5dp</dimen>
 
     <dimen name="button_dimen">18dp</dimen>
+
+    <dimen name="home_button_dimen_w">300dp</dimen>
+    <dimen name="home_button_dimen_h">60dp</dimen>
+
 </resources>

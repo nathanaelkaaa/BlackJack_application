@@ -5,4 +5,17 @@
     <string name="action_Tirer">Tirer</string>
     <string name="action_Doubler">Doubler</string>
     <string name="action_Diviser">Diviser</string>
+
+    <!-- LOGIN -->
+    <string name="login_button">Login</string>
+    <string name="login_mdp">Mot de passe :</string>
+    <string name="login_email">Email :</string>
+
+    <string name="register_button">Register</string>
+    <string name="register_mdp">Mot de passe :</string>
+    <string name="register_confirmation_mdp">Confirmer mot de passe :</string>
+    <string name="register_pseudo">Pseudo :</string>
+    <string name="register_email">Email :</string>
+
+
 </resources>

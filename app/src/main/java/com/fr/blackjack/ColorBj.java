@@ -1,5 +1,5 @@
 package com.fr.blackjack;
 
-public enum Color {
+public enum ColorBj {
     ROUGE,NOIR;
 }

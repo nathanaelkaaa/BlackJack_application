@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1014311340068",
+    "firebase_url": "https://blackjack-ad630-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "blackjack-ad630",
+    "storage_bucket": "blackjack-ad630.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014311340068:android:a068edb03e92b865a5f0b1",
+        "android_client_info": {
+          "package_name": "com.fr.blackjack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014311340068-tdpctm62bn9s5p1jvohsi7gjbjjf41ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA4ZxJIZrGVbXAqprZZpoREiJTeYX4-JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014311340068-tdpctm62bn9s5p1jvohsi7gjbjjf41ei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

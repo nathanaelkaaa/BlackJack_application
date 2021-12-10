@@ -2,7 +2,7 @@ package com.fr.blackjack;
 
 public class Card {
     private int id;
-    private Color color;
+    private ColorBj color;
     private CardValue card_value;
     private String string_value;
     private int int_value = 0;
@@ -17,9 +17,9 @@ public class Card {
         setInt_value(card_value);
 
         if (symbol==Symbol.TREFLE || symbol==Symbol.PIQUE){
-            this.color = Color.NOIR;
+            this.color = ColorBj.NOIR;
         }else{
-            this.color = Color.ROUGE;
+            this.color = ColorBj.ROUGE;
         }
     }
 
@@ -27,7 +27,7 @@ public class Card {
         return card_value;
     }
 
-    public Color getColor() {
+    public ColorBj getColor() {
         return color;
     }
 

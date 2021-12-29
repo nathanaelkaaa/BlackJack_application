@@ -98,7 +98,7 @@ public class BjFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    if (dsp.child("mail").exists()) {
+                    if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                         solde.setText(dsp.child("solde").getValue().toString());
                     }}}
 
@@ -117,7 +117,7 @@ public class BjFragment extends Fragment {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         for (DataSnapshot dsp : snapshot.getChildren()) {
-                            if (dsp.child("mail").exists()) {
+                            if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                                 //Si valeur mis dans l'input > au solde
                                 if (betInput.getText().toString().isEmpty()){
                                     Toast.makeText(getContext(),"Vous devez mettre une mise",Toast.LENGTH_LONG).show();
@@ -125,6 +125,7 @@ public class BjFragment extends Fragment {
                                 else{
                                 bet = Double.parseDouble(betInput.getText().toString());
                                 walletSolde = Double.parseDouble(dsp.child("solde").getValue().toString());
+
                                 if (bet <= walletSolde){
                                     betLayout.setVisibility(ConstraintLayout.INVISIBLE);
                                     total1.setVisibility(TextView.INVISIBLE);
@@ -315,7 +316,7 @@ public class BjFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    if (dsp.child("mail").exists()) {
+                    if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                         //Si valeur mis dans l'input > au solde
                         if (!(end == null)) {
                             switch (end) {
@@ -355,7 +356,7 @@ public class BjFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    if (dsp.child("mail").exists()) {
+                    if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                             total1.setVisibility(TextView.VISIBLE);
                             solde.setText(dsp.child("solde").getValue().toString());
                             total1.setText(String.valueOf(player1.getMyHandValue()));

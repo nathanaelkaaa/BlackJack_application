@@ -75,10 +75,11 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    if (dsp.child("mail").exists()) {
+                    if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                         Log.i("String", "Test -- "+dsp.child("solde").getValue().toString());
                         win  =  Integer.parseInt(dsp.child("gagne").getValue().toString());
                         lose =  Integer.parseInt(dsp.child("perdu").getValue().toString());
+                        Log.i("String","email = "+MainActivity.email);
                         ratioWL = calculRatio(win,lose);
                         pseudo.setText(dsp.child("pseudo").getValue().toString());
                         gagne.setText(String.valueOf(win));
@@ -107,7 +108,7 @@ public class ProfileFragment extends Fragment {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         for (DataSnapshot dsp : snapshot.getChildren()) {
-                            if (dsp.child("mail").exists()) {
+                            if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                                 Date date = new Date();
 
                                 long lastDate = Long.valueOf(dsp.child("rewardClock").getValue().toString()) + 1800000;
@@ -154,7 +155,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()) {
-                    if (dsp.child("mail").exists()) {
+                    if (dsp.child("mail").exists() && dsp.child("mail").getValue().toString().equals(MainActivity.email)) {
                         solde.setText(dsp.child("solde").getValue().toString());
                     }}}
             @Override

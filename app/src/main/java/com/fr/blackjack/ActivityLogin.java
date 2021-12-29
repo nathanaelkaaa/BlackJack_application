@@ -3,6 +3,7 @@ package com.fr.blackjack;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -65,6 +66,7 @@ public class ActivityLogin extends AppCompatActivity {
                     if (snapshot.child("pseudo").exists()) {
                         Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
                         startActivity(intent);
+                        MainActivity.email = snapshot.child("mail").getValue().toString();
                         Toast.makeText(getApplicationContext(),"Bon retour "+snapshot.child("pseudo").getValue().toString()+" !",Toast.LENGTH_LONG).show();
 
                     }
@@ -104,6 +106,7 @@ public class ActivityLogin extends AppCompatActivity {
                                 if (dsp.child("mail").exists()) {
                                     if (dsp.child("mail").getValue().toString().equalsIgnoreCase(inputlemail.getText().toString()) && dsp.child("mdp").getValue().toString().equalsIgnoreCase(inputlmdp.getText().toString())){
                                         exists[0] = true;
+                                        MainActivity.email = inputlemail.getText().toString();
                                         key[0] = dsp.getKey();
                                     }
                                 }
